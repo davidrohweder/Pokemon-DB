@@ -15,33 +15,44 @@
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
 
-        Dim query As String = TextBox1.Text
+        Try
+            Dim query As String = TextBox1.Text
 
-        If Not query = "" Then
+            If Not query = "" Then
 
-            Dim queryTable As DataTable = New DataTable()
+                Dim queryTable As DataTable = New DataTable()
 
-            frmMain.generateTable(queryTable)
+                frmMain.generateTable(queryTable)
 
-            ' search thru all card items for | query phrase
-            For Each card As Card In frmMain.cards
+                ' search thru all card items for | query phrase
+                For Each row As DataGridViewRow In DataGridView1.Rows
+                    Dim cells(7) As String
+                    Dim inc As Integer = 0
 
-                If card.name.ToUpper.Contains(query.ToUpper()) Then
-                    queryTable.Rows.Add(card.id, card.name, card.rarity, card.type, card.pSet, card.release, card.quanity, card.grade)
+                    For Each cell As DataGridViewCell In row.Cells
+                        cells(inc) = cell.Value
+                        inc += 1
+                    Next
+
+                    If cells(1).ToUpper.Contains(query.ToUpper()) Then
+                        queryTable.Rows.Add(cells(0), cells(1), cells(2), cells(3), cells(4), cells(5), cells(6), cells(7))
+                    End If
+
+                Next
+
+                If queryTable.Rows.Count = 0 Then
+                    MsgBox("0 Results Found from search, """ + TextBox1.Text + """")
+                Else
+                    DataGridView1.DataSource = queryTable
                 End If
 
-            Next
-
-            If queryTable.Rows.Count = 0 Then
-                MsgBox("0 Results Found from search, """ + TextBox1.Text + """")
             Else
-                DataGridView1.DataSource = queryTable
+                MsgBox("Error :: Invalid input - please enter search phrase")
+
             End If
-
-        Else
-            MsgBox("Error :: Invalid input - please enter search phrase")
-
-        End If
+        Catch ex As Exception
+            MsgBox("Error - " & ex.Message)
+        End Try
 
     End Sub
 
@@ -117,33 +128,33 @@
 
             frmMain.generateTable(queryTable)
 
-        For Each card As Card In frmMain.cards
+            For Each card As Card In frmMain.cards
 
-            If cboRarity.Text <> "" And card.rarity = cboRarity.Text Then
-                filters.rarity = True
-
-            End If
-
-            If cboType.Text <> "" And card.type = cboType.Text Then
-                filters.type = True
-
-            End If
-
-            If cboSet.Text <> "" And card.pSet = cboSet.Text Then
-                filters.pSet = True
-
-            End If
-
-            If cboGrade.Text <> "" Then
-
-                If card.grade = Convert.ToInt16(cboGrade.Text) Then
-                    filters.grade = True
+                If cboRarity.Text <> "" And card.rarity = cboRarity.Text Then
+                    filters.rarity = True
 
                 End If
 
-            End If
+                If cboType.Text <> "" And card.type = cboType.Text Then
+                    filters.type = True
 
-            If filters.rarity = True Or filters.type = True Or filters.pSet = True Or filters.grade = True Then
+                End If
+
+                If cboSet.Text <> "" And card.pSet = cboSet.Text Then
+                    filters.pSet = True
+
+                End If
+
+                If cboGrade.Text <> "" Then
+
+                    If card.grade = Convert.ToInt16(cboGrade.Text) Then
+                        filters.grade = True
+
+                    End If
+
+                End If
+
+                If filters.rarity = True Or filters.type = True Or filters.pSet = True Or filters.grade = True Then
 
                     If cboRarity.Text <> "" And filters.rarity = True Then
                         criteriaMet = True
@@ -163,7 +174,7 @@
 
                     Else
 
-                            If cboType.Text <> "" Then
+                        If cboType.Text <> "" Then
                             criteriaMet = False
                         End If
 
@@ -202,16 +213,15 @@
 
                     End If
 
-            End If
+                End If
 
                 criteriaMet = True
-
+                ' reset filter table
+                filters.rarity = False
+                filters.type = False
+                filters.pSet = False
+                filters.grade = False
             Next
-            ' reset filter table
-            filters.rarity = False
-            filters.type = False
-            filters.pSet = False
-            filters.grade = False
 
             DataGridView1.DataSource = queryTable
         End If

@@ -15,3 +15,4 @@ C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Debug\Pokemon_DB.frm
 C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Debug\Pokemon_DB.frmDelete.resources
 C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Debug\Pokemon_DB.frmSearch.resources
 C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Debug\Pokemon_DB.frmAddFields.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Debug\Pokemon_DB.frmEdit.resources

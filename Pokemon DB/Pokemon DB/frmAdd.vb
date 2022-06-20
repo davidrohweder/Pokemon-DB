@@ -52,8 +52,24 @@
 
     Private Sub btnAddCard_Click(sender As Object, e As EventArgs) Handles btnAddCard.Click
 
+        Dim query As String = ""
+        Dim matched As Boolean = False
+
         If Not TextBox1.Text = "" Then
-            Dim sql_query As New SQL("INSERT INTO Cards ( Pokemon, Rarity, Type, [Set], [Release Date], Quanity, Grade ) VALUES ('" & TextBox1.Text & "', '" & cboRarity.Text & "', '" & cboType.Text & "', '" & cboSet.Text & "', '" & TextBox2.Text & "', '" & pkrQuanity.Value & "', '" & cboGrade.Text & "');", "Cards")
+
+            ' check if card is present to add quanity
+            For Each card As Card In frmMain.cards
+                If card.name = TextBox1.Text And card.release = TextBox2.Text And card.grade = cboGrade.Text And card.rarity = cboRarity.Text And card.pSet = cboSet.Text And card.type = cboType.Text Then
+                    query = "UPDATE Cards SET Quanity = " & card.quanity + pkrQuanity.Value & " WHERE id = " & card.id & ""
+                    matched = True
+                End If
+            Next
+
+            If matched = False Then
+                query = "INSERT INTO Cards ( Pokemon, Rarity, Type, [Set], [Release Date], Quanity, Grade ) VALUES ('" & TextBox1.Text & "', '" & cboRarity.Text & "', '" & cboType.Text & "', '" & cboSet.Text & "', '" & TextBox2.Text & "', '" & pkrQuanity.Value & "', '" & cboGrade.Text & "');"
+            End If
+
+            Dim sql_query As New SQL(query, "Cards")
             Dim result As String = sql_query.nonQuery(0)
 
             lblSuccess.Text = result

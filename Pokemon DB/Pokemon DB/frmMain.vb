@@ -144,4 +144,12 @@ Public Class frmMain
         frmAddCard.Show()
     End Sub
 
+    Private Sub EditCardToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EditCardToolStripMenuItem1.Click
+        frmEdit.Show()
+    End Sub
+
+    Private Sub PokemonTraderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PokemonTraderToolStripMenuItem.Click
+
+    End Sub
+
 End Class

@@ -1,6 +1,7 @@
 ﻿Public Class RawData
 
-    Private path As String
+    Private api_url As String
+    Private api_auth As String
 
 
     ' constructor

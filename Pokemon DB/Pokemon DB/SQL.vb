@@ -86,6 +86,8 @@ Public Class SQL
                     result = "Sucessfully deleted type!"
                 Case 7
                     result = "Sucessfully deleted set!"
+                Case 10
+                    result = "Successfully edited card!"
             End Select
 
         Catch ex As Exception
