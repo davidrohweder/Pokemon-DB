@@ -147,7 +147,7 @@
 
                 If cboGrade.Text <> "" Then
 
-                    If card.grade = Convert.ToInt16(cboGrade.Text) Then
+                    If card.grade = Convert.ToDouble(cboGrade.Text) Then
                         filters.grade = True
 
                     End If
@@ -225,6 +225,7 @@
 
             DataGridView1.DataSource = queryTable
         End If
+
     End Sub
 
     Private Sub btnClearFilters_Click(sender As Object, e As EventArgs) Handles btnClearFilters.Click

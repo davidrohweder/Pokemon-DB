@@ -8,7 +8,7 @@ Public Class Card
     Private pokemon_pSet As String
     Private pokemon_release As String
     Private pokemon_quanity As Integer
-    Private pokemon_grade As Single
+    Private pokemon_grade As Double
 
     Public Property id() As String
         Get
@@ -82,7 +82,7 @@ Public Class Card
         End Set
     End Property
 
-    Public Sub New(ByRef id As Integer, ByRef name As String, ByRef rarity As String, ByRef type As String, ByRef pSet As String, ByRef release As String, ByRef quanity As Integer, ByRef grade As Single)
+    Public Sub New(ByRef id As Integer, ByRef name As String, ByRef rarity As String, ByRef type As String, ByRef pSet As String, ByRef release As String, ByRef quanity As Integer, ByRef grade As Double)
 
         pokemon_id = id
         pokemon_name = name

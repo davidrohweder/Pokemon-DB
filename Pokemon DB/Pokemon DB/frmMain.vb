@@ -149,7 +149,19 @@ Public Class frmMain
     End Sub
 
     Private Sub PokemonTraderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PokemonTraderToolStripMenuItem.Click
+        MsgBox("TODO")
+    End Sub
 
+    Private Sub CardCountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CardCountToolStripMenuItem.Click
+        MsgBox(cards.Count)
+    End Sub
+
+    Private Sub CollectionWorthToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CollectionWorthToolStripMenuItem.Click
+        MsgBox("TODO")
+    End Sub
+
+    Private Sub AddMassToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddMassToolStripMenuItem.Click
+        MsgBox("TODO")
     End Sub
 
 End Class
