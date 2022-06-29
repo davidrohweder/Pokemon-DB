@@ -10,7 +10,7 @@
             cboRarity.SelectedIndex = 0
             cboSet.SelectedIndex = 0
             cboType.SelectedIndex = 0
-            cboGrade.SelectedIndex = 2
+            cboGrade.SelectedIndex = 0
 
         Catch ex As Exception
             MsgBox(ex.Message)

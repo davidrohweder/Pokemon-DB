@@ -44,6 +44,8 @@ Partial Class frmMain
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.ExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CSVToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,7 +96,7 @@ Partial Class frmMain
         '
         'DeleteCardToolStripMenuItem
         '
-        Me.DeleteCardToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditCardToolStripMenuItem, Me.EditCardToolStripMenuItem1, Me.AddCardToolStripMenuItem, Me.AddMassToolStripMenuItem})
+        Me.DeleteCardToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditCardToolStripMenuItem, Me.EditCardToolStripMenuItem1, Me.AddCardToolStripMenuItem, Me.AddMassToolStripMenuItem, Me.ExportToolStripMenuItem})
         Me.DeleteCardToolStripMenuItem.Name = "DeleteCardToolStripMenuItem"
         Me.DeleteCardToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DeleteCardToolStripMenuItem.Text = "Card Actions"
@@ -202,6 +204,19 @@ Partial Class frmMain
         Me.btnReset.Text = "Reset"
         Me.btnReset.UseVisualStyleBackColor = True
         '
+        'ExportToolStripMenuItem
+        '
+        Me.ExportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CSVToolStripMenuItem})
+        Me.ExportToolStripMenuItem.Name = "ExportToolStripMenuItem"
+        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ExportToolStripMenuItem.Text = "Export"
+        '
+        'CSVToolStripMenuItem
+        '
+        Me.CSVToolStripMenuItem.Name = "CSVToolStripMenuItem"
+        Me.CSVToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CSVToolStripMenuItem.Text = "CSV"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,4 +264,6 @@ Partial Class frmMain
     Friend WithEvents AddCardToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PokemonTraderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddMassToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CSVToolStripMenuItem As ToolStripMenuItem
 End Class

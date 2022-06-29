@@ -147,7 +147,7 @@
 
                 If cboGrade.Text <> "" Then
 
-                    If card.grade = Convert.ToDouble(cboGrade.Text) Then
+                    If card.grade = cboGrade.Text Then
                         filters.grade = True
 
                     End If

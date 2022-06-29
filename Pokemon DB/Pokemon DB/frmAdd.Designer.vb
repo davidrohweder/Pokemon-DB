@@ -149,6 +149,7 @@ Partial Class frmAddCard
         Me.pkrQuanity.Name = "pkrQuanity"
         Me.pkrQuanity.Size = New System.Drawing.Size(183, 20)
         Me.pkrQuanity.TabIndex = 5
+        Me.pkrQuanity.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label3
         '
@@ -193,7 +194,7 @@ Partial Class frmAddCard
         'cboGrade
         '
         Me.cboGrade.FormattingEnabled = True
-        Me.cboGrade.Items.AddRange(New Object() {"10", "9.9", "9", "8.5", "8", "7.5", "7", "6", "5", "4", "3", "2", "1"})
+        Me.cboGrade.Items.AddRange(New Object() {"Ungraded", "10", "9.5", "9", "8.5", "8", "7.5", "7", "6", "5", "4", "3", "2", "1"})
         Me.cboGrade.Location = New System.Drawing.Point(201, 143)
         Me.cboGrade.Name = "cboGrade"
         Me.cboGrade.Size = New System.Drawing.Size(183, 21)

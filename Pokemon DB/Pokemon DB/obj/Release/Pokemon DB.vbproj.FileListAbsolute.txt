@@ -1,0 +1,18 @@
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\bin\Release\Pokemon DB.exe.config
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\bin\Release\Pokemon DB.exe
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\bin\Release\Pokemon DB.pdb
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\bin\Release\Pokemon DB.xml
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon DB.vbproj.AssemblyReference.cache
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon DB.vbproj.SuggestedBindingRedirects.cache
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon_DB.frmAddFields.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon_DB.frmEdit.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon_DB.frmMain.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon_DB.frmAddCard.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon_DB.frmDelete.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon_DB.frmSearch.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon_DB.Resources.resources
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon DB.vbproj.GenerateResource.cache
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon DB.vbproj.CoreCompileInputs.cache
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon DB.exe
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon DB.xml
+C:\Users\david.rohweder\Documents\Pokemon DB\Pokemon DB\obj\Release\Pokemon DB.pdb

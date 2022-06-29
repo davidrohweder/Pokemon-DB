@@ -164,4 +164,18 @@ Public Class frmMain
         MsgBox("TODO")
     End Sub
 
+    Private Sub CSVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CSVToolStripMenuItem.Click
+
+        Dim file As IO.StreamWriter
+
+        file = My.Computer.FileSystem.OpenTextFileWriter(Application.StartupPath() & "\exportCards.csv", True)
+
+        For Each card As Card In cards
+            file.WriteLine(card.name & "," & card.rarity & "," & card.pSet & "," & card.type & "," & card.release & "," & card.grade)
+        Next
+
+        file.Close()
+
+    End Sub
+
 End Class
